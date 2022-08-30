@@ -1,0 +1,130 @@
+@import '_vars';
+@import '_fonts';
+@import '_blocks';
+
+.blog {
+  padding-top: 45px;
+  &__dark-button {
+    &-wrapper {
+      display: flex;
+      justify-content: center;
+      width: 100%;
+      margin: 60px 0px 80px 0px;
+    }
+  }
+
+
+  &__decoration {
+    @include decoration(47px);
+  }
+  &__search {
+    display: flex;
+    justify-content: flex-end;
+    margin: 55px 5px 30px 0px;
+  }
+  &__item--text {
+    padding-left: 27px;
+  }
+  &__item {
+    border-radius: 5px;
+    background-color: #fcf6f6;
+    &:not(:last-child) {
+      margin-bottom: 50px;
+    }
+    &-media{
+      display: flex;
+      align-items: center;
+      img{
+        width: 560px;
+        min-height: 320px;
+        border-radius: 5px;
+      }
+    }
+    &-audio {
+      width: 215px;
+      height: 35px;
+    }
+    &-title {
+      margin-top: 20px;
+      @include text(20px, 500, 26px);
+    }
+    &-description {
+      margin-bottom: 15px;
+      @include text(17px, 400, 26px);
+      max-height: 105px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      display: -webkit-box;
+      -webkit-line-clamp: 4;
+      -webkit-box-orient: vertical;
+    }
+    &-inner {
+      height: 379px;
+      margin-right: -20px !important;
+      margin-left: -20px !important;
+    }
+    &-content {
+      display: flex;
+      justify-content: space-between;
+    }
+    &-content-main {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin-bottom: 40px;
+      margin-top: 28px;
+    }
+    &-svg {
+      border-bottom: 3px solid #ffffff;
+      border-left: 3px solid #ffffff;
+      border-radius: 5px;
+      background-color: #fcf6f6;
+      padding: 15px 19px;
+      margin-left: 19px;
+    }
+    &-content-right {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+    }
+    &-media--video {
+      position: relative;
+      &:before {
+        content: '';
+        background-image: url('../img/svg/a-icon-play.svg');
+        cursor: pointer;
+        height: 72px;
+        width: 72px;
+        position: absolute;
+        top: calc(50% - 36px);
+        left: calc(50% - 36px);
+      }
+    }
+  }
+}
+
+.autor {
+  display: flex;
+  &__logo{
+    img{
+      width: 54px;
+      height: 54px;
+      border-radius: 50%;
+    }
+  }
+  &__name {
+    @include text(17px, 500, 28px);
+  }
+  &__post-info {
+    display: flex;
+    flex-direction: column;
+    margin-left: 12px;
+  }
+  &__post-description {
+    display: flex;
+  }
+  &__raiting {
+    margin-left: 10px;
+  }
+}
